@@ -46,5 +46,11 @@ TodoSchema.pre('save', function(next){
     generated id in the code field of the task (we can actually access any property/field of the task using the 
     this keyword).
 
+    next() basically tells the computer that we are done and it can finally save the document now. With this, 
+    we generate a unique ID for every single task created using the nanoid package.
     */
 
+
+// Todos model using this TodoSchema blueprint and export it. This is how:
+const Todos = mongoose.model('Todos', TodoSchema)
+export default Todos
