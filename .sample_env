@@ -1,0 +1,3 @@
+MONGO_URI = 
+
+# rename this file to .env
