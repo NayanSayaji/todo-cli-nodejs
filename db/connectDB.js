@@ -9,7 +9,10 @@ export async function connectDB(){
     try {
         const spinner = ora('Connecting to the database...').start()
         await mongoose.connect(process.env.MONGO_URI)
-        spinner.stop()
+        .then(spinner.stop())
+        .catch((err) => {
+            console.error(err);
+          }); 
         console.log(chalk.greenBright('Successfully connected to database!!!'))   
     } catch (error) {
         console.log(chalk.redBright('Error: '), error);

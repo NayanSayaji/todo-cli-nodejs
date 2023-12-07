@@ -1,5 +1,5 @@
 {
-  "name": "todo-list-cli",
+  "name": "todo",
   "version": "1.0.0",
   "description": "",
   "exports": "./index.js",
@@ -18,5 +18,8 @@
     "mongoose": "^8.0.2",
     "nanoid": "^5.0.4",
     "ora": "^7.0.1"
+  },
+  "bin": {
+    "todo": "index.js"
   }
 }
